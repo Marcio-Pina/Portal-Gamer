@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -93,6 +93,21 @@
             box-shadow: 0 0 15px #00FFFF, 0 0 30px #00FFFF;
             transform: scale(1.05);
         }
+        
+        /* NOVO ESTILO: Botão Instagram */
+        .button-instagram {
+            background-color: #E1306C; /* Cor do Instagram (Rosa/Roxo) */
+            box-shadow: 0 0 10px #E1306C, 0 0 20px rgba(225, 48, 108, 0.5);
+            color: white;
+            border: 2px solid #C13584;
+        }
+
+        .button-instagram:hover {
+            background-color: #C13584;
+            box-shadow: 0 0 15px #C13584, 0 0 30px #E1306C;
+            transform: scale(1.05);
+        }
+
 
         /* Estilos do Quiz */
         .quiz-section {
@@ -174,6 +189,22 @@
             margin-bottom: 10px;
             font-size: 0.8em;
         }
+        
+        /* ESTILO PARA A SEÇÃO DE DICAS */
+        .tip-box {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #2a2a2a;
+            border-left: 4px solid #FFD700;
+            border-radius: 0 4px 4px 0;
+            font-style: italic;
+            font-size: 0.85em;
+        }
+        .tip-box strong {
+            color: #FFD700;
+            font-weight: 700;
+        }
+
 
         /* ESTILOS DO LINK PARA PARECER UM BOTÃO */
         .game-card a.game-card-link {
@@ -230,7 +261,14 @@
             <a href="#home">Início</a>
             <a href="#games">Arquivos</a>
             <a href="#quiz">Quiz Interativo</a>
-            <a href="https://chat.whatsapp.com/B9srl3fqYhE21KbXJoSDOY" target="_blank" class="button-glow">Comunidade</a>
+            
+            <a href="https://www.instagram.com/portal_gamer._?igsh=YTYwd2o2djFuaHhw&utm_source=qr" 
+               target="_blank" 
+               class="action-button button-instagram">Instagram</a>
+
+            <a href="https://chat.whatsapp.com/B9srl3fqYhE21KbXJoSDOY" 
+               target="_blank" 
+               class="button-glow">Comunidade</a>
         </nav>
     </header>
 
@@ -242,55 +280,69 @@
         </section>
 
         <section id="games">
-            <h2>🕹️ Arquivos da Arena: Jogos Populares</h2>
+            <h2>🕹️ Arquivos da Arena: Dicas e Estratégias</h2>
             <div class="game-grid">
                 
                 <div class="game-card">
                     <h4>Free Fire</h4>
                     <span class="genre">Battle Royale / Mobile</span>
-                    <p>Famoso jogo de Battle Royale para celular, onde 50 jogadores caem em uma ilha e lutam pela sobrevivência. O objetivo é ser o último a permanecer vivo (BOOYAH!). Conhecido por partidas rápidas e requisitos leves.</p>
+                    <div class="tip-box">
+                        <strong>Dica Rápida:</strong> Priorize o uso do **Capa e Gelo** para defesa instantânea em combates de curta distância. Mantenha-se nas bordas da zona segura para evitar confrontos triplos.
+                    </div>
                     <a href="https://intl.garena.com/" target="_blank" class="game-card-link">Ver Guia Avançado</a>
                 </div>
 
                 <div class="game-card">
                     <h4>Valorant</h4>
                     <span class="genre">Tiro Tático / PC</span>
-                    <p>Um shooter tático 5v5 da Riot Games que combina mecânicas de tiro precisas (como CS:GO) com habilidades únicas de personagens ("Agentes"). O jogo exige comunicação e estratégia de equipe para plantar ou desarmar a Spike.</p>
+                    <div class="tip-box">
+                        <strong>Dica Rápida:</strong> A comunicação é chave! Use suas habilidades (ultimates) sempre em coordenação com o time. Em rodadas econômicas, prefira armas baratas como a **Spectre** ou a **Sheriff**.
+                    </div>
                     <a href="https://store.epicgames.com/pt-BR/p/valorant" target="_blank" class="game-card-link">Site Oficial</a>
                 </div>
 
                 <div class="game-card">
                     <h4>Call of Duty (CoD)</h4>
                     <span class="genre">FPS / Múltiplas Plataformas</span>
-                    <p>Uma franquia lendária de tiro em primeira pessoa. O CoD atualiza seu Battle Royale (Warzone) e oferece modos clássicos de tiro frenético (Multiplayer) e campanhas cinematográficas. Popular tanto no PC/Console quanto no Mobile.</p>
+                    <div class="tip-box">
+                        <strong>Dica Rápida:</strong> Em **Warzone**, sempre use o **Contrato de Procurado** no início da partida para obter dinheiro rápido e localizar inimigos próximos. Mude sua rotação antes do fechamento do gás.
+                    </div>
                     <a href="https://callofdutyleague.com/fr-fr/" target="_blank" class="game-card-link">Ver Novidades da Temporada</a>
                 </div>
 
                 <div class="game-card">
                     <h4>Clash Royale</h4>
                     <span class="genre">Estratégia / Mobile</span>
-                    <p>Um jogo de cartas colecionáveis e estratégia em tempo real da Supercell. O objetivo é destruir a Torre do Rei e as Torres da Princesa do oponente usando um deck de unidades, feitiços e defesas. Rápido e competitivo.</p>
+                    <div class="tip-box">
+                        <strong>Dica Rápida:</strong> Nunca gaste todo o seu Elixir de uma vez. Mantenha pelo menos 3 ou 4 de Elixir na reserva para defender um contra-ataque rápido do oponente, especialmente se ele tiver o **Corredor**.
+                    </div>
                     <a href="https://store.supercell.com/pt/clashroyale" target="_blank" class="game-card-link">Ver Decks Meta</a>
                 </div>
 
                 <div class="game-card">
                     <h4>Brawl Stars</h4>
                     <span class="genre">Ação Arcade / Mobile</span>
-                    <p>Também da Supercell, é um jogo de arena multiplayer com vários modos de jogo (Gemas, Fute-Brawl, Combate, etc.). Escolha seu "Brawler" com habilidades únicas e lute em partidas rápidas de 3v3 ou solo.</p>
+                    <div class="tip-box">
+                        <strong>Dica Rápida:</strong> Evite jogar de forma muito agressiva no início. Use os arbustos para recarregar sua vida e suas habilidades. Em Fute-Brawl, o controle do meio é mais importante que o gol.
+                    </div>
                     <a href="https://supercell.com/en/games/brawlstars/" target="_blank" class="game-card-link">Ver Melhores Brawlers</a>
                 </div>
 
                 <div class="game-card">
                     <h4>eFootball</h4>
                     <span class="genre">Futebol / Simulação</span>
-                    <p>O simulador de futebol da Konami (antigo Pro Evolution Soccer). Focado em jogabilidade realista e licenças de times e ligas importantes. É gratuito para jogar e muito popular no cenário competitivo de eSports.</p>
+                    <div class="tip-box">
+                        <strong>Dica Rápida:</strong> Não confie apenas no botão de Pique. Use o **toque de bola rápido** e passes curtos para abrir espaços e utilize o **drible manual** para tirar a marcação na área.
+                    </div>
                     <a href="https://www.konami.com/efootball/pt/" target="_blank" class="game-card-link">Site Oficial</a>
                 </div>
 
                 <div class="game-card">
                     <h4>FC Mobile / EA Sports FC</h4>
                     <span class="genre">Futebol / Ultimate Team</span>
-                    <p>Sucessor do FIFA, o EA Sports FC e o FC Mobile oferecem a experiência do futebol com foco no modo Ultimate Team. Colecione cartas de jogadores, monte seu time dos sonhos e compita em partidas online ou carreira.</p>
+                    <div class="tip-box">
+                        <strong>Dica Rápida:</strong> Domine a finalização de trivela (Power Shot)! Ela é extremamente forte fora da área e pega o goleiro de surpresa. Use L1 + R1 (ou similar) + Chute.
+                    </div>
                     <a href="https://www.ea.com/pt-br/games/ea-sports-fc/fc-mobile" target="_blank" class="game-card-link">Ver Cartas em Destaque</a>
                 </div>
             </div>
