@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -28,6 +29,12 @@
             align-items: center;
             border-bottom: 3px solid #00FFFF;
         }
+        
+        /* NOVO ESTILO: Garante que os itens de navegação fiquem alinhados */
+        .navbar nav {
+            display: flex; 
+            align-items: center; 
+        }
 
         .navbar h1 {
             color: #FF4500;
@@ -35,12 +42,12 @@
             font-size: 1.8em;
         }
 
-        /* CORREÇÃO DO ESPAÇAMENTO: Aumentado o margin e padding */
+        /* Ajuste do espaçamento dos links de navegação */
         .navbar nav a {
             color: #00FFFF;
             text-decoration: none;
-            margin-left: 25px; /* Aumentamos o espaçamento lateral */
-            padding: 10px 15px; /* Aumentamos o padding */
+            margin-left: 25px; 
+            padding: 10px 15px; 
             transition: color 0.3s, text-shadow 0.3s;
             text-transform: uppercase;
         }
@@ -304,7 +311,7 @@
         footer a {
             color: #00FFFF;
             text-decoration: none;
-            margin: 0 15px; /* Aumentamos o espaçamento no footer também */
+            margin: 0 15px; 
             transition: color 0.3s;
         }
         footer a:hover {
@@ -611,4 +618,3 @@
     </script>
 </body>
 </html>
-
