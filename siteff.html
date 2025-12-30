@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTAL GMAER Free Fire | Tudo sobre Armas e Personagens</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+        :root {
+            --orange: #FF4500;
+            --cyan: #00FFFF;
+            --dark: #0b0b0b;
+            --card-bg: #1A1A1A;
+        }
+
+        body {
+            font-family: 'Orbitron', sans-serif;
+            background-color: var(--dark);
+            color: #E0E0E0;
+            margin: 0;
+            scroll-behavior: smooth;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: rgba(26, 26, 26, 0.95);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--orange);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar h1 { color: var(--orange); font-size: 1.5em; margin: 0; text-shadow: 0 0 10px var(--orange); }
+
+        .navbar nav a {
+            color: var(--cyan);
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 0.8em;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        .navbar nav a:hover { color: white; text-shadow: 0 0 10px var(--cyan); }
+
+        /* Hero */
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://wallpaperaccess.com/full/1213579.jpg') center/cover;
+        }
+
+        .hero h2 { font-size: 2.5em; color: var(--orange); text-shadow: 0 0 15px var(--orange); }
+
+        /* Container Geral */
+        .main-container { padding: 40px 5%; }
+
+        .section-header {
+            text-align: center;
+            margin: 60px 0 30px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #333;
+        }
+
+        .section-header h2 { color: var(--cyan); text-transform: uppercase; letter-spacing: 2px; }
+
+        /* Grid de Personagens */
+        .char-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .char-card {
+            background: var(--card-bg);
+            border: 1px solid #333;
+            border-radius: 10px;
+            padding: 20px;
+            transition: 0.3s;
+        }
+
+        .char-card:hover { border-color: var(--orange); transform: scale(1.02); }
+
+        .ability-badge {
+            display: inline-block;
+            background: #333;
+            color: var(--orange);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.7em;
+            margin-bottom: 10px;
+        }
+
+        .char-name { color: #FFD700; font-size: 1.4em; margin: 10px 0; }
+
+        .char-desc { font-size: 0.85em; color: #BBB; line-height: 1.5; }
+
+        /* Seção de Armas com Filtro */
+        .weapon-filters {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .filter-btn {
+            background: #222;
+            border: 1px solid var(--cyan);
+            color: var(--cyan);
+            padding: 8px 15px;
+            cursor: pointer;
+            font-family: 'Orbitron';
+            font-size: 0.7em;
+            transition: 0.3s;
+        }
+
+        .filter-btn.active, .filter-btn:hover { background: var(--cyan); color: #000; }
+
+        .weapon-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .weapon-card {
+            background: #111;
+            border: 1px solid #222;
+            padding: 15px;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        .weapon-card h5 { margin: 10px 0; color: #fff; }
+
+        .stat-bar {
+            height: 6px;
+            background: #333;
+            margin: 8px 0;
+            border-radius: 3px;
+            position: relative;
+        }
+
+        .stat-fill {
+            height: 100%;
+            background: var(--orange);
+            border-radius: 3px;
+        }
+
+        .stat-label { font-size: 0.6em; display: flex; justify-content: space-between; }
+
+        footer { text-align: center; padding: 40px; border-top: 2px solid var(--orange); margin-top: 50px; }
+
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <h1>PORTAL GAMER **FF**</h1>
+        <nav>
+            <a href="#chars">Personagens</a>
+            <a href="#weapons">Arsenal</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>CENTRAL DE INTELIGÊNCIA</h2>
+        <p>Dados técnicos de todos os personagens e armamentos atualizados.</p>
+    </section>
+
+    <div class="main-container">
+        
+        <div id="chars" class="section-header">
+            <h2>Habilidades de Personagens</h2>
+        </div>
+
+        <div class="char-grid">
+            <div class="char-card">
+                <span class="ability-badge">Ativa: Som na Caixa</span>
+                <div class="char-name">Alok</div>
+                <p class="char-desc">Cria uma aura de 5m que aumenta a velocidade de movimento em 15% e recupera 5 HP/s por 10s. Perfeito para suporte e agressividade.</p>
+            </div>
+            <div class="char-card">
+                <span class="ability-badge">Ativa: Escudo Tunado</span>
+                <div class="char-name">Chrono</div>
+                <p class="char-desc">Cria um campo de força impenetrável que bloqueia 800 de dano. Ideal para salvar aliados em campo aberto.</p>
+            </div>
+            <div class="char-card">
+                <span class="ability-badge">Ativa: Disparo Rebelde</span>
+                <div class="char-name">Tatsuya</div>
+                <p class="char-desc">Dá um arranque rápido para frente. Pode ser usado até 3 vezes seguidas. A melhor escolha para jogadores de Rush.</p>
+            </div>
+            <div class="char-card">
+                <span class="ability-badge">Passiva: Velocidade</span>
+                <div class="char-name">Kelly (Ventania)</div>
+                <p class="char-desc">Aumenta a velocidade de corrida permanentemente. Após correr por 4s, o primeiro tiro causa dano extra.</p>
+            </div>
+            <div class="char-card">
+                <span class="ability-badge">Ativa: Energia Carmesim</span>
+                <div class="char-name">Orion</div>
+                <p class="char-desc">Substitui EP por Energia Carmesim. Torna-se imune a dano e drena HP de inimigos próximos por 3s.</p>
+            </div>
+            <div class="char-card">
+                <span class="ability-badge">Passiva: Proteção Nano</span>
+                <div class="char-name">Sonia</div>
+                <p class="char-desc">Ao receber dano fatal, entra em um estado de invencibilidade por 0.5s e ganha um escudo. Se abater alguém em 3s, recupera HP.</p>
+            </div>
+        </div>
+
+        <div id="weapons" class="section-header">
+            <h2>Arsenal de Elite</h2>
+        </div>
+
+        <div class="weapon-filters">
+            <button class="filter-btn active" onclick="filterWeapons('all')">Todas</button>
+            <button class="filter-btn" onclick="filterWeapons('ar')">Rifles (AR)</button>
+            <button class="filter-btn" onclick="filterWeapons('smg')">SMG</button>
+            <button class="filter-btn" onclick="filterWeapons('shotgun')">Doze</button>
+            <button class="filter-btn" onclick="filterWeapons('sniper')">Snipers</button>
+        </div>
+
+        <div class="weapon-grid" id="weaponGrid">
+            </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Guia Oficial de Sobreviventes - BOOYAH!</p>
+    </footer>
+
+    <script>
+        const weapons = [
+            { name: "GROZA", type: "ar", damage: 85, rate: 70 },
+            { name: "AK47", type: "ar", damage: 92, rate: 55 },
+            { name: "SCAR", type: "ar", damage: 75, rate: 80 },
+            { name: "MP40", type: "smg", damage: 60, rate: 95 },
+            { name: "UMP", type: "smg", damage: 65, rate: 85 },
+            { name: "M1014", type: "shotgun", damage: 95, rate: 30 },
+            { name: "M1887", type: "shotgun", damage: 100, rate: 25 },
+            { name: "AWM", type: "sniper", damage: 100, rate: 10 },
+            { name: "BARRETT", type: "sniper", damage: 95, rate: 15 },
+            { name: "MAG-7", type: "shotgun", damage: 70, rate: 60 },
+            { name: "MP5", type: "smg", damage: 55, rate: 90 },
+            { name: "WOODPECKER", type: "ar", damage: 98, rate: 40 }
+        ];
+
+        function renderWeapons(type) {
+            const grid = document.getElementById('weaponGrid');
+            grid.innerHTML = '';
+            
+            const filtered = type === 'all' ? weapons : weapons.filter(w => w.type === type);
+
+            filtered.forEach(w => {
+                grid.innerHTML += `
+                    <div class="weapon-card">
+                        <h5>${w.name}</h5>
+                        <div class="stat-label"><span>Dano</span><span>${w.damage}%</span></div>
+                        <div class="stat-bar"><div class="stat-fill" style="width: ${w.damage}%"></div></div>
+                        <div class="stat-label"><span>Velocidade</span><span>${w.rate}%</span></div>
+                        <div class="stat-bar"><div class="stat-fill" style="width: ${w.rate}%; background: var(--cyan)"></div></div>
+                    </div>
+                `;
+            });
+        }
+
+        function filterWeapons(type) {
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if(btn.innerText.toLowerCase().includes(type) || (type === 'all' && btn.innerText === 'Todas')) {
+                    btn.classList.add('active');
+                }
+            });
+            renderWeapons(type);
+        }
+
+        // Inicializar
+        renderWeapons('all');
+    </script>
+</body>
+</html>
